@@ -1,0 +1,28 @@
+{
+  "name": "oncheckin-client-yjs",
+  "version": "1.0.0",
+  "description": "Persistent online peer and backup for Yjs docs.",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/basham/oncheckin-client-yjs.git"
+  },
+  "author": "Chris Basham <chris@bash.am>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/basham/oncheckin-client-yjs/issues"
+  },
+  "homepage": "https://github.com/basham/oncheckin-client-yjs#readme",
+  "dependencies": {
+    "config": "3.3.9",
+    "js-yaml": "4.1.0",
+    "ws": "8.13.0",
+    "y-leveldb": "0.1.2",
+    "y-websocket": "1.5.0",
+    "yjs": "13.6.6"
+  }
+}
