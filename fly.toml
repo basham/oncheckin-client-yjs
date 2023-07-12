@@ -1,0 +1,20 @@
+# fly.toml app configuration file generated for oncheckin-client on 2023-07-11T21:35:08-04:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = "oncheckin-client"
+primary_region = "ord"
+SWAP = true
+
+[http_service]
+  internal_port = 3000
+  force_https = true
+  auto_stop_machines = true
+  auto_start_machines = true
+  min_machines_running = 1
+  processes = ["app"]
+
+[mounts]
+  source = "oncheckin_data"
+  destination = "data"
