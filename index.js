@@ -21,10 +21,10 @@ config.docs.forEach(syncDoc);
 function syncDoc (name) {
 	const doc = getYDoc(name);
 
-	const backup = debounce(() => {
-		backupDoc({ doc, name });
-		console.log(name, '> Backed up');
-	}, config.debounceBackupInterval);
+	const backup = debounce(
+		() => backupDoc({ doc, name }),
+		config.debounceBackupInterval
+	);
 
 	doc.on('update', () => {
 		console.log(name, '> Updated');
@@ -74,6 +74,8 @@ function backupDoc ({ doc, name }) {
 
 	// Write the new data to the "current" file.
 	fs.writeFileSync(currFilePath, data);
+
+	console.log(name, '> Backed up');
 }
 
 function debounce (fn, timeout = 100) {
